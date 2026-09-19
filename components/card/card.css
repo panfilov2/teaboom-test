@@ -1,0 +1,158 @@
+.card {
+  display: grid;
+  grid-template-columns: minmax(260px, 380px) 1fr;
+  gap: 48px;
+  padding: 40px 0 64px;
+  align-items: start;
+}
+
+.card__gallery {
+  margin: 0;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  position: sticky;
+  top: 24px;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__info {
+  min-width: 0;
+}
+
+.card__category {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.card__category a {
+  color: var(--color-text-muted);
+  border-bottom: 1px solid transparent;
+}
+
+.card__category a:hover {
+  color: var(--color-accent-dark);
+  border-bottom-color: currentColor;
+}
+
+.card__title {
+  margin: 0 0 12px;
+  font-size: 32px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+.card__lead {
+  margin: 0 0 28px;
+  color: var(--color-text-muted);
+  font-size: 15px;
+  max-width: 46ch;
+}
+
+.card__form .tabs {
+  margin: 0 0 20px;
+}
+
+.card__sku {
+  margin: 0 0 14px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.card__sku span {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.card__price-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  margin: 0 0 24px;
+}
+
+.card__price {
+  font-style: normal;
+}
+
+.card__price--old {
+  font-size: 16px;
+  color: var(--color-text-muted);
+  text-decoration-thickness: 1px;
+}
+
+.card__price--current {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-price);
+}
+
+.card__discount {
+  padding: 3px 8px;
+  background-color: var(--color-price-bg);
+  color: var(--color-price);
+  font-size: 12px;
+  font-weight: 700;
+  align-self: center;
+}
+
+.card__description {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--color-border);
+  max-width: 62ch;
+}
+
+.card__description-title {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.card__description p {
+  margin: 0;
+  color: var(--color-text);
+}
+
+@media (max-width: 767px) {
+  .card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px 0 48px;
+  }
+
+  .card__gallery {
+    position: static;
+  }
+
+  .card__title {
+    font-size: 24px;
+  }
+
+  .card__lead {
+    margin-bottom: 22px;
+  }
+
+  .card__price--current {
+    font-size: 24px;
+  }
+
+  .card__form .btn {
+    width: 100%;
+    padding: 14px 20px;
+  }
+}
